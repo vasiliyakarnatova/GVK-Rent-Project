@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Добавяне на обява</title>
+	<link rel="stylesheet" href="AddProperty.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<img src="logo.png" class="logo-img" alt="Logo">
+				<h1>Rents</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#">Продажби</a></li>
+					<li><a href="#">Агенции</a></li>
+					<li><a href="#">Моите имоти</a></li>
+					<li><a href="#">Добави обява</a></li>
+					<li><a href="#">Вход</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container1">
+		<div class="title">Добавяне на обява</div>
+		<form id="propertyForm">
+			<div class="user-details">
+				<p>Тип имот:</p>
+				<input type="radio" id="house" name="property_type" value="house">
+				<label for="house">Къща</label><br>
+				<input type="radio" id="apartment" name="property_type" value="apartment">
+				<label for="apartment">Апартамент</label><br>
+				<input type="radio" id="others" name="property_type" value="others">
+				<label for="others">Други имоти</label>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Локация:</span>
+				<input type="text" placeholder="въведи локация"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Адрес:</span>
+				<input type="text" placeholder="въведи адрес"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Наем на месец:</span>
+				<input type="text" placeholder="въведи наем"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Квадратура:</span>
+				<input type="text" placeholder="въведи квадратура"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Описание:</span>
+				<input type="text" placeholder="въведи описание на имота"required>
+			</div>
+
+			<div id="additionalFields"></div> <!-- Контейнер за допълнителните полета -->
+
+
+			<div class="button">
+				<input type="submit" value="Добави обява">
+			</div>
+		</form>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-section">
+				<h3>Контакти</h3>
+				<p>Имейл: info@example.com</p>
+				<p>Телефон: +359 123 456 789</p>
+			</div>
+			<div class="footer-section">
+				<h3>Полезни връзки</h3>
+				<ul>
+					<li><a href="#">Условия за ползване</a></li>
+					<li><a href="#">Политика за поверителност</a></li>
+					<li><a href="#">Често задавани въпроси</a></ли>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>Следвайте ни</h3>
+					<ul class="social-media">
+						<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="AddProperty.js"></script>
+</body>
+</html>
