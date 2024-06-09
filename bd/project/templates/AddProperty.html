@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block head %}
+	<title>Добавяне на обява</title>
+	<link rel="stylesheet" href="../static/AddProperty.css">
+{% endblock %}
+
+{% block body %}
+	<div class="container1">
+		<div class="title">Добавяне на обява</div>
+		<form id="propertyForm">
+			<div class="user-details">
+				<p>Тип имот:</p>
+				<input type="radio" id="house" name="property_type" value="house">
+				<label for="house">Къща</label><br>
+				<input type="radio" id="apartment" name="property_type" value="apartment">
+				<label for="apartment">Апартамент</label><br>
+				<input type="radio" id="others" name="property_type" value="others">
+				<label for="others">Други имоти</label>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Локация:</span>
+				<input type="text" placeholder="въведи локация"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Адрес:</span>
+				<input type="text" placeholder="въведи адрес"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Наем на месец:</span>
+				<input type="text" placeholder="въведи наем"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Квадратура:</span>
+				<input type="text" placeholder="въведи квадратура"required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">Описание:</span>
+				<input type="text" placeholder="въведи описание на имота"required>
+			</div>
+
+			<div id="additionalFields"></div> <!-- Контейнер за допълнителните полета -->
+
+			<div class="button">
+				<input type="submit" value="Добави обява">
+			</div>
+		</form>
+	</div>
+	<script src="../static/AddProperty.js"></script>
+{% endblock %}
