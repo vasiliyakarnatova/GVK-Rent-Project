@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target.name === 'property_type') {
             updateAdditionalFields(event.target.value);
         }
-    });
+    });``   
 
     function updateAdditionalFields(propertyType) {
         additionalFieldsContainer.innerHTML = ''; // Изчистване на допълнителните полета
