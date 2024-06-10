@@ -16,6 +16,14 @@
             <p class="price">Цена: 0 лв.</p>
         </div>
         <!-- Тук ще се добавят нови обяви -->
+         {% for property in properties %}
+            <div class="listing">
+                <img src="https://via.placeholder.com/300" alt="Image">
+                <h2>{{ property.type }}</h2>
+                <p>{{ property.description }}</p>
+                <p class="price">Цена: {{ property.rent }} лв.</p>
+            </div>
+         {% endfor %}
     </div>
     
     <script src="../static/script.js"></script>

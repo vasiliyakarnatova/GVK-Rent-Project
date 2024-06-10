@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <h2>Users Table</h2>
+    <table>
+      <tr>
+        <th>Clients ID</th>
+        <th>email</th>
+        <th>password</th>
+      </tr>
+      {% for client in clients %}
+        <tr>
+            <th>{{ client.id }}</th>
+            <th>{{ client.client_email }}</th>
+            <th>{{ client.client_password }}</th>
+            <th></th>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Staff Table</h2>
+    <table>
+      <tr>
+        <th>Emp ID</th>
+        <th>email</th>
+        <th>password</th>
+      </tr>
+      {% for emp in staff %}
+        <tr>
+            <th>{{ emp.id }}</th>
+            <th>{{ emp.staff_email }}</th>
+            <th>{{ emp.staff_password }}</th>
+        </tr>
+      {% endfor %}
+    </table>
+</body>
+</html>

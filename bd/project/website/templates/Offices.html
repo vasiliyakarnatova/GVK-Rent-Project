@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block head %}
+	<title>Агенции</title>
+	<link rel="stylesheet" href="../static/Agencies.css">
+{% endblock %}
+
+{% block body %}
+	<div class="container1">
+		<div class="title">Офиси</div>
+		<form id="propertyForm">
+			<div class="agencies">
+				<div class="grid-container">
+					{% for office in offices %}
+					<div class="grid-item">
+						<h3><i class="fa-solid fa-building"></i>{{ office.office_name }}</h3>
+						<h3><i class="fa-icon fas fa-map-marker-alt"></i>{{ office.office_address }}</h3>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}

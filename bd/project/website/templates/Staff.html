@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block head %}
+	<title>Агенции</title>
+	<link rel="stylesheet" href="../static/Agencies copy.css">
+{% endblock %}
+
+{% block body %}
+	<div class="container1">
+		<div class="title">Служители</div>
+		<form id="propertyForm">
+			<div class="agencies">
+				<div class="grid-container">
+					{% for employee in staff %}
+					<div class="grid-item">
+						<h3><i class="fa-icon fas fa-map-marker-alt"></i>Офис: {{ employee.working_office }}</h3>
+						<p><i class="fa-icon fas fa-user"></i>Име: {{ employee.staff_name }}</p>
+						<p><i class="fa-icon fas fa-phone"></i>Тел: {{ employee.staff_phone_number }}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}

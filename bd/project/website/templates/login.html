@@ -12,32 +12,42 @@
     <div class="container">
         <button onclick="location.href = '/';" class="exit">X</button>
         <div class="signin-signup">
-            <form action="" class="sign-in-form">
+            <form method="POST" class="sign-in-form">
                 <h2 class="title">Sign in</h2>
+                <input type="hidden" name="form_id" value="signin">
                 <div class="input-field">
                     <i class="fa fa-user"></i>
-                    <input type="text" placeholder="Username">
+                    <input autocomplete="off" required type="email" name="email_l" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fa fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input autocomplete="off" required type="password" name="password_l" placeholder="Password">
+                </div>
+                <div aria-required="true">
+                    <input name="role" type="radio" value="Staff"> Брокер
+                    <input name="role" type="radio" value="Client"> Клиент    
                 </div>
                 <input type="submit" value="Login" class="btn">
                 <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
             </form>
-            <form action="" class="sign-up-form">
+            <form method="POST" class="sign-up-form">
                 <h2 class="title">Sign up</h2>
+                <input type="hidden" name="form_id" value="signup">
                 <div class="input-field">
                     <i class="fa fa-user"></i>
-                    <input type="text" placeholder="Username">
+                    <input autocomplete="off" required type="text" name="username" placeholder="Username">
                 </div>
                 <div class="input-field">
                     <i class="fa fa-envelope"></i>
-                    <input type="text" placeholder="Email">
+                    <input autocomplete="off" required type="email" name="email_r" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fa fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input required type="password" name="password_r" placeholder="Password">
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-phone"></i>
+                    <input autocomplete="off" required type="text" name="number" placeholder="Phone Number">
                 </div>
                 <input type="submit" value="Sign up" class="btn">
                 <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>

@@ -2,7 +2,7 @@
 
 {% block head %}
     <title>Имоти под наем</title>
-    <link rel="stylesheet" href="../static/ad_style.css">
+    <link rel="stylesheet" href="../static/my_properties.css">
 {% endblock %}
 
 {% block body %}
@@ -15,5 +15,13 @@
             <p class="price">Цена: 0 лв.</p>
         </div>
         <!-- Тук ще се добавят нови обяви -->
+        {% for property in properties %}
+        <div class="listing">
+            <img src="https://via.placeholder.com/300" alt="Image">
+            <h2>{{ property.type }}</h2>
+            <p>{{ property.description }}</p>
+            <p class="price">Цена: {{ property.rent }} лв.</p>
+        </div>
+        {% endfor %}
     </div>
 {% endblock %}

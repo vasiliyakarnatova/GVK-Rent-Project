@@ -16,10 +16,17 @@
             <nav>
                 <ul>
                     <li><a href="/">Продажби</a></li>
-                    <li><a href="/agencies">Агенции</a></li>
-                    <li><a href="/properties">Моите имоти</a></li>
-                    <li><a href="/add_property">Добави обява</a></li>
-                    <li><a href="/signin">Вход</a></li>
+                    <li><a href="/Offices">Офиси</a></li>
+                    <li><a href="/Staff">Служители</a></li>
+                    {% if not email %}
+                        <li><a href="/Signin">Вход</a></li>
+                    {% else %}
+                        <li><a href="/Properties">Моите имоти</a></li>
+                        {% if role == 'Staff' %}
+                            <li><a href="/Add_Property">Добави обява</a></li>
+                        {% endif %}
+                        <li><a href="/Logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>

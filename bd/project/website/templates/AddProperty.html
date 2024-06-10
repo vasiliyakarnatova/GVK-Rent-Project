@@ -8,7 +8,7 @@
 {% block body %}
 	<div class="container1">
 		<div class="title">Добавяне на обява</div>
-		<form id="propertyForm">
+		<form method="POST" id="propertyForm">
 			<div class="user-details">
 				<p>Тип имот:</p>
 				<input type="radio" id="house" name="property_type" value="house">
@@ -20,28 +20,33 @@
 			</div>
 
 			<div class="input-box">
+				<span class="details">Собственик:</span>
+				<input type="email" name="property_owner"  placeholder="въведи имейл на собственик"required>
+			</div>
+
+			<div class="input-box">
 				<span class="details">Локация:</span>
-				<input type="text" placeholder="въведи локация"required>
+				<input type="text" name="property_location"  placeholder="въведи локация"required>
 			</div>
 
 			<div class="input-box">
 				<span class="details">Адрес:</span>
-				<input type="text" placeholder="въведи адрес"required>
+				<input type="text" name="property_address" placeholder="въведи адрес"required>
 			</div>
 
 			<div class="input-box">
 				<span class="details">Наем на месец:</span>
-				<input type="text" placeholder="въведи наем"required>
+				<input type="text" name="property_rent" placeholder="въведи наем"required>
 			</div>
 
 			<div class="input-box">
 				<span class="details">Квадратура:</span>
-				<input type="text" placeholder="въведи квадратура"required>
+				<input type="text" name="property_size" placeholder="въведи квадратура"required>
 			</div>
 
 			<div class="input-box">
 				<span class="details">Описание:</span>
-				<input type="text" placeholder="въведи описание на имота"required>
+				<input type="text" name="property_description" placeholder="въведи описание на имота"required>
 			</div>
 
 			<div id="additionalFields"></div> <!-- Контейнер за допълнителните полета -->
