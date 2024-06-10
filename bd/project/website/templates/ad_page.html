@@ -8,13 +8,16 @@
 
 {% block body %}
     <div class="listings">
+        <a href="./ad.html" class="listing">
         <!-- Шаблон за една обява -->
-        <div class="listing">
-            <img src="https://via.placeholder.com/300" alt="Image">
-            <h2>Заглавие на обява</h2>
-            <p>Описание на имота. Това е примерна обява.</p>
-            <p class="price">Цена: 0 лв.</p>
-        </div>
+            <div class="listing">
+                <img src="https://via.placeholder.com/300" alt="Image">
+                <h2>Заглавие на обява</h2>
+                <p>Описание на имота. Това е примерна обява.</p>
+                <p class="price">Цена: 0 лв.</p>
+            </div>
+        </a>
+    </div>
         <!-- Тук ще се добавят нови обяви -->
          {% for property in properties %}
             <div class="listing">
