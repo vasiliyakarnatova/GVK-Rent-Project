@@ -33,15 +33,15 @@ header {
 }
 
 .logo-img {
-    width: 50px; /* Примерен размер на логото */
+    width: 50px;
     height: auto;
-    margin-right: -10px; /* Разстояние между логото и текста */
+    margin-right: -10px;
 }
 
 .logo h1 {
     margin: 0;
     font-size: 2em;
-    color: #34568B; /* Син цвят */
+    color: #34568B;
     font-family: 'Brush Script MT', cursive;
     font-weight: 1;
 }
@@ -67,13 +67,12 @@ nav ul li a {
 }
 
 nav ul li:nth-child(4) a {
-    background-color: #92A8D1; /* Син цвят */
+    background-color: #92A8D1;
     color: #fff;
 }
 
-
 nav ul li a:hover {
-    background-color: #92A8D1; /* Син цвят */
+    background-color: #92A8D1;
     color: #fff;
 }
 
@@ -95,6 +94,8 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
 }
 
 .listing:hover {
@@ -118,12 +119,13 @@ main {
 
 .price {
     font-weight: bold;
-    color: #34568B; /* Син цвят */
+    color: #34568B;
     margin: 0.5em;
+    margin-bottom: 1em;
 }
 
 footer {
-    background-color: #92A8D1; /* Тъмен син цвят */
+    background-color: #92A8D1;
     color: #fff;
     padding: 0.5em 2em;
     margin-top: auto;
@@ -139,17 +141,16 @@ footer .container {
 .footer-section {
     flex: 1;
     min-width: 200px;
-    padding-left: 120px; /* Добавяне на разстояние отдясно */
+    padding-left: 120px;
 }
 
 .footer-section p {
-    color: #34568B; /* Син цвят */
+    color: #34568B;
 }
-
 
 .footer-section h3 {
     margin-top: 0;
-    color: white; /* Светъл син цвят */
+    color: white;
 }
 
 .footer-section ul {
@@ -169,7 +170,7 @@ footer .container {
 }
 
 .footer-section ul li a:hover {
-    color: white; /* Светъл син цвят */
+    color: white;
 }
 
 .social-media {
@@ -179,16 +180,15 @@ footer .container {
 }
 
 .social-media a {
-    font-size: 1.5em; /* Размер на иконите */
-    color: #fff; /* Цвят на иконите */
+    font-size: 1.5em;
+    color: #fff;
     transition: color 0.3s;
 }
 
 .social-media a:hover {
-    color: #92A8D1; /* Светъл син цвят при ховър */
+    color: #92A8D1;
 }
 
 .social-media a:first-child {
-    margin-left: 27px; /* Промени стойността според нуждите */
+    margin-left: 27px;
 }
-

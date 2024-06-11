@@ -8,24 +8,30 @@
 
 {% block body %}
     <div class="listings">
-        <a href="./ad.html" class="listing">
-        <!-- Шаблон за една обява -->
+        <!-- <a href="{{ url_for('views.show_details') }}" class="listing">
             <div class="listing">
                 <img src="https://via.placeholder.com/300" alt="Image">
                 <h2>Заглавие на обява</h2>
                 <p>Описание на имота. Това е примерна обява.</p>
                 <p class="price">Цена: 0 лв.</p>
             </div>
-        </a>
-    </div>
-        <!-- Тук ще се добавят нови обяви -->
+        </a> -->
+    
          {% for property in properties %}
+            <a href="{{ url_for('views.show_details') }}" class="listing">
             <div class="listing">
-                <img src="https://via.placeholder.com/300" alt="Image">
+                {% if property.type == 'house' %}
+                    <img src="https://cdn1.vectorstock.com/i/1000x1000/73/70/isolated-flat-house-home-concept-simple-vector-13747370.jpg" alt="Image">
+                {% elif property.type == 'apartment' %}
+                    <img src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg" alt="Image">
+                {% else%}
+                    <img src="https://via.placeholder.com/300" alt="Image">
+                {% endif %}
                 <h2>{{ property.type }}</h2>
                 <p>{{ property.description }}</p>
                 <p class="price">Цена: {{ property.rent }} лв.</p>
             </div>
+            </a>
          {% endfor %}
     </div>
     

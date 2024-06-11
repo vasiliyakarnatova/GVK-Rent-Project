@@ -99,3 +99,10 @@ def show_staff():
 
     staff = Staff.query.all()
     return render_template('Staff.html', staff=staff, email=session.get('email'), role=session.get('role'))
+
+@views.route('/Details/')
+def show_details():
+    return render_template('ad.html')
+# @views.route('/Details/<address>')
+# def show_details(address):
+#     return render_template('ad.html', property=Property.query.filter_by(address=address).first())
